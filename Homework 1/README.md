@@ -1,5 +1,3 @@
-# BigDataComputing
-
 # Homework 1
 
 The object of this homework is to get familiar with Apache Spark and with MapReduce algorithms.  
@@ -8,7 +6,7 @@ There are three algorithms that have to implement:
 
 #### 1. K-MEANS CLUSTERING
 
-Given a set of points U ⊂ R^D and an integer K,  k-means clustering aims at determining a set C ⊂ R^D of K centroids which minimize the objective function defined in the code.  
+Given a set of points U ⊂ R^D and an integer K,  k-means clustering aims at determining a set C ⊂ R^D of K centroids which minimize the objective function Δ(U,C) defined in the code.  
 Since the problem is NP-hard, current efficient solutions seek approximate solutions and Lloyd's algorithm is widely used to this purpose.  
 The solutions proposed is defined as:
 <pre>
@@ -30,3 +28,14 @@ We write a function MRComputeFairObjective that takes in input the set U=A∪B a
 #### 3. MRPrintStatistics function
 
 MRPrintStatistics takes in input the set U=A∪B and a set C of centroids, and computes and prints the triplets (ci,NAi,NBi), for 1≤i≤K=|C|, where ci is the i-th centroid in C, and NAi,NBi are the numbers of points of A and B, respectively, in the cluster Ui centered in ci.  
+
+
+The program receives on command-line arguments a path of input points and three integers L, K, M such that:
+- Prints the command-line arguments and stores  L,K,M into suitable variables. 
+- Reads the input points into an RDD -called inputPoints-, subdivided into L partitions.
+- Prints the number N of points, the number NA of points of group A, and the number NB of points of group B (hence, N=NA+NB). 
+- Computes a set C of K centroids by using the Spark implementation of the standard Lloyd's algorithm for the input points, disregarding the points' demographic groups, and using M as number of iterations. 
+- Prints the values of the two objective functions Δ(U,C) and Φ(A,B,C), computed by running  MRComputeStandardObjective and MRComputeFairObjective, respectively.
+- Runs MRPrintStatistics.
+
+The input file of points is *uber_small.csv* .
