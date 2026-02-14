@@ -2,7 +2,7 @@
 
 The homework 1 concerns a variant of the classical Lloyd's algorithm for k-means clustering, which enforces a fairness constraint on the solution based on extra demographic information attached to the input points. The object of this homework is to get familiar with Apache Spark and with MapReduce algorithms.
 
-There are three algorithms that have to implement:
+There are four steps to implement:
 
 #### 1. K-MEANS CLUSTERING
 
