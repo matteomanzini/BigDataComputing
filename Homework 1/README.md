@@ -29,6 +29,7 @@ We write a function *MRComputeFairObjective* that takes in input the set U=A∪B
 
 *MRPrintStatistics* takes in input the set U=A∪B and a set C of centroids, and computes and prints the triplets (ci,NAi,NBi), for 1≤i≤K=|C|, where ci is the i-th centroid in C, and NAi,NBi are the numbers of points of A and B, respectively, in the cluster Ui centered in ci.  
 
+#### 4. G16HW1.py file
 
 The program receives on command-line arguments a path of input points and three integers L, K, M such that:
 - Prints the command-line arguments and stores  L,K,M into suitable variables. 
@@ -38,4 +39,4 @@ The program receives on command-line arguments a path of input points and three 
 - Prints the values of the two objective functions Δ(U,C) and Φ(A,B,C), computed by running *MRComputeStandardObjective* and *MRComputeFairObjective*, respectively.
 - Runs *MRPrintStatistics*.
 
-The input file of points is *uber_small.csv* .
+The inputPoints file is *uber_small.csv* .
