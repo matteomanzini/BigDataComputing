@@ -22,7 +22,7 @@ Important: the number of top-K heavy hitters might be larger than K, which is a 
 
 #### OUTPUT results
 The program prints:  
-- The input parameters provided as command-line arguments
+- The input parameters provided as command-line arguments;
 - The number of processed items, that is, |Σ|;
 - The number of distinct items in Σ;
 - The average relative error of the frequency estimates provided by CM for the top-K heavy hitters;
